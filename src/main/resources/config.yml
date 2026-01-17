@@ -1,0 +1,296 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+#                           vPractice Configuration
+#                        Competitive PvP Practice Plugin
+# ═══════════════════════════════════════════════════════════════════════════════
+# Public Release - Free & Open Source by Vera Network
+# Compatible with Minecraft 1.8.x - 1.20.x
+# Requires: qRanks (included in download)
+# 
+# After making changes, use /practice reload to apply them.
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# ─────────────────────────────────────────────────────────────────────────────────
+#                              STORAGE SETTINGS
+# ─────────────────────────────────────────────────────────────────────────────────
+# Choose between JSON (file-based) or MySQL (database) storage.
+# JSON is simpler and works out-of-the-box.
+# MySQL is recommended for networks with multiple servers.
+
+storage:
+  # Storage type: "json" or "mysql"
+  type: json
+  
+  # MySQL settings (only used if type is "mysql")
+  mysql:
+    host: localhost
+    port: 3306
+    database: vpractice
+    username: root
+    password: ""
+    # Connection pool settings
+    pool-size: 10
+    # Auto-save interval in minutes (0 to disable)
+    auto-save-interval: 5
+
+# ─────────────────────────────────────────────────────────────────────────────────
+#                              SERVER BRANDING
+# ─────────────────────────────────────────────────────────────────────────────────
+# Customize messages and branding for your server.
+
+server:
+  # Server name displayed in messages and scoreboard
+  name: "&6Your Server"
+  # Website URL (shown in match results)
+  website: "play.yourserver.com"
+  # Discord invite (shown in help messages)
+  discord: "discord.gg/yourserver"
+
+# ─────────────────────────────────────────────────────────────────────────────────
+#                              SPAWN LOCATIONS
+# ─────────────────────────────────────────────────────────────────────────────────
+# Set these in-game with /setspawn and /seteditor for accurate values.
+
+spawn:
+  world: world
+  x: 0.5
+  y: 80.0
+  z: 0.5
+  yaw: 0.0
+  pitch: 0.0
+
+editor:
+  world: world
+  x: 0.5
+  y: 80.0
+  z: -20.5
+  yaw: 180.0
+  pitch: 0.0
+
+# ─────────────────────────────────────────────────────────────────────────────────
+#                               ELO SETTINGS
+# ─────────────────────────────────────────────────────────────────────────────────
+# Controls the ranked matchmaking rating system.
+
+elo:
+  # Starting ELO for new players
+  default: 1000
+  # K-factor determines how much ELO changes per match
+  k-factor:
+    new-player: 40      # Players with <10 games
+    normal: 25          # Players with 10-100 games
+    veteran: 16         # Players with >100 games
+  # Minimum ELO a player can have
+  minimum: 100
+  # ELO change bounds per match
+  min-change: 5
+  max-change: 50
+
+# ─────────────────────────────────────────────────────────────────────────────────
+#                              QUEUE SETTINGS
+# ─────────────────────────────────────────────────────────────────────────────────
+# Controls how players are matched together.
+
+queue:
+  # How often to process queues (in ticks, 20 = 1 second)
+  process-interval: 5
+  # Starting ELO range for ranked matchmaking (+/- this value)
+  initial-elo-range: 100
+  # How much to expand range per second of waiting
+  elo-range-expansion: 10
+  # Maximum ELO range (prevents extreme mismatches)
+  max-elo-range: 500
+
+# ─────────────────────────────────────────────────────────────────────────────────
+#                              MATCH SETTINGS
+# ─────────────────────────────────────────────────────────────────────────────────
+# Controls match behavior and timing.
+
+match:
+  # Countdown before fight starts (in seconds)
+  countdown: 3
+  # Time to show results before teleporting to spawn (in ticks)
+  end-delay: 100
+  # Pearl cooldown in seconds (0 to disable)
+  pearl-cooldown: 16
+  # Allow players to drop items during matches
+  allow-item-drop: false
+  # Enable kill effect particles
+  kill-effect: true
+  # Enable lightning on kill (visual only)
+  lightning-on-kill: true
+
+# ─────────────────────────────────────────────────────────────────────────────────
+#                              DUEL SETTINGS
+# ─────────────────────────────────────────────────────────────────────────────────
+
+duel:
+  # How long duel requests last (in seconds)
+  request-timeout: 60
+  # Allow dueling players in parties
+  allow-party-duels: true
+  # Cooldown between sending duel requests (in seconds)
+  request-cooldown: 5
+
+# ─────────────────────────────────────────────────────────────────────────────────
+#                              PARTY SETTINGS
+# ─────────────────────────────────────────────────────────────────────────────────
+# Controls party behavior and limits.
+
+party:
+  # Maximum players allowed in a single party
+  max-size: 15
+  # Whether parties are open to join by default
+  default-open: false
+  # Allow party vs party matches
+  pvp-enabled: true
+  # Allow party FFA matches
+  ffa-enabled: true
+  # Party invite timeout (in seconds)
+  invite-timeout: 60
+
+# ─────────────────────────────────────────────────────────────────────────────────
+#                              SPECTATOR SETTINGS
+# ─────────────────────────────────────────────────────────────────────────────────
+
+spectator:
+  # Allow spectating active matches
+  enabled: true
+  # Allow spectating ranked matches
+  allow-ranked: true
+  # Hide spectators from fighters
+  hide-from-fighters: true
+
+# ─────────────────────────────────────────────────────────────────────────────────
+#                              KIT EDITOR SETTINGS
+# ─────────────────────────────────────────────────────────────────────────────────
+
+kit-editor:
+  # Enable kit editor
+  enabled: true
+  # Allow saving custom kit layouts
+  allow-save: true
+
+# ─────────────────────────────────────────────────────────────────────────────────
+#                               SCOREBOARD
+# ─────────────────────────────────────────────────────────────────────────────────
+# Sidebar scoreboard settings.
+
+scoreboard:
+  # Enable/disable the sidebar scoreboard globally
+  enabled: true
+  # Scoreboard title (supports color codes with &)
+  title: "&6Your Server &7⏐ &fPractice"
+  # Update interval in ticks (20 = 1 second)
+  update-interval: 20
+
+# ─────────────────────────────────────────────────────────────────────────────────
+#                            ANNOUNCEMENTS
+# ─────────────────────────────────────────────────────────────────────────────────
+# Auto-broadcast tips and information.
+
+announcements:
+  # Enable/disable auto announcements
+  enabled: true
+  # Interval between announcements (in seconds)
+  interval: 180
+  # Announcement messages (randomly selected)
+  messages:
+    - "&7Tip: Use &f/duel <player> &7to challenge someone!"
+    - "&7Tip: Join ranked queue to earn ELO and climb leaderboards!"
+    - "&7Tip: Use &f/party create &7to play with friends!"
+    - "&7Tip: Customize your kit layout with &f/kit&7!"
+    - "&7Tip: View leaderboards with &f/leaderboard <ladder>&7!"
+
+# ─────────────────────────────────────────────────────────────────────────────────
+#                         PERFORMANCE & OPTIMIZATION
+# ─────────────────────────────────────────────────────────────────────────────────
+
+performance:
+  # Ticks between entity cleanup in arenas
+  entity-clear-interval: 1200
+  # Maximum matches created per tick
+  matches-per-tick: 5
+  # Enable player data caching
+  cache-players: true
+  # Async database operations
+  async-database: true
+
+# ─────────────────────────────────────────────────────────────────────────────────
+#                              WORLD PROTECTION
+# ─────────────────────────────────────────────────────────────────────────────────
+
+protection:
+  prevent-break: true
+  prevent-place: true
+  prevent-bucket: true
+  prevent-spawn-drop: true
+  prevent-hunger: true
+  prevent-spawn-fall-damage: true
+  prevent-spawn-pvp: true
+
+# ─────────────────────────────────────────────────────────────────────────────────
+#                              STAFF SETTINGS
+# ─────────────────────────────────────────────────────────────────────────────────
+
+staff:
+  mod-mode-enabled: true
+  mod-mode:
+    vanish-on-enable: true
+    click-teleport: true
+    freeze-enabled: true
+
+# ─────────────────────────────────────────────────────────────────────────────────
+#                              LADDERS
+# ─────────────────────────────────────────────────────────────────────────────────
+# Enable/disable specific game modes
+
+ladders:
+  nodebuff:
+    enabled: true
+    ranked: true
+    display-name: "&cNoDebuff"
+  combo:
+    enabled: true
+    ranked: true
+    display-name: "&bCombo"
+  gapple:
+    enabled: true
+    ranked: true
+    display-name: "&6Gapple"
+  sumo:
+    enabled: true
+    ranked: true
+    display-name: "&eSumo"
+  archer:
+    enabled: true
+    ranked: true
+    display-name: "&2Archer"
+
+# ─────────────────────────────────────────────────────────────────────────────────
+#                              MESSAGES
+# ─────────────────────────────────────────────────────────────────────────────────
+
+messages:
+  prefix: "&6Practice &8» &7"
+  queue-join: "&aJoined {type} {ladder} queue!"
+  queue-leave: "&cYou left the queue."
+  match-found: "&aMatch found! Opponent: &f{opponent}"
+  match-starting: "&eMatch starting in &f{seconds}&e..."
+  match-start: "&a&lFIGHT!"
+  match-win: "&aYou won the match!"
+  match-lose: "&cYou lost the match."
+  duel-sent: "&aDuel request sent to &f{player}&a!"
+  duel-received: "&aYou received a duel request from &f{player}&a!"
+  error-no-permission: "&cYou don't have permission to do that!"
+  error-player-not-found: "&cPlayer not found!"
+  error-already-in-queue: "&cYou are already in a queue!"
+  error-already-in-match: "&cYou are already in a match!"
+
+# ─────────────────────────────────────────────────────────────────────────────────
+#                              DEBUG
+# ─────────────────────────────────────────────────────────────────────────────────
+
+debug:
+  enabled: false
+  log-matches: false
+  log-queues: false

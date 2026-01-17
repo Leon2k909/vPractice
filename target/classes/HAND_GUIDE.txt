@@ -1,0 +1,70 @@
+Vera Practice - Hand Guide
+==========================
+
+COMMANDS
+--------
+/practice       - Admin command for plugin management
+   reload       - Reload configuration
+   set <path> <val> - Set configuration value directly
+   
+/duel <player>  - Challenge a player to a duel (requires spawn)
+/accept <player> - Accept a duel request
+/decline <player> - Decline a duel request
+
+/party          - Party command base
+   create       - Create a new party
+   disband      - Disband your party (Leader only)
+   leave        - Leave your current party
+   invite <name> - Invite a player to your party
+   kick <name>  - Kick a player from your party
+   info         - View party information
+   promote <name> - Promote a member to leader
+
+/spectate <player> - Spectate a player currently in a match
+/leave          - Leave the queue, spectate mode, or editor
+/kit            - specific kit editor alias
+
+/settings       - Open settings menu (Scoreboard, Duel Requests, etc)
+
+QUEUE SYSTEM
+------------
+Unranked:
+- No ELO gain/loss
+- Open to everyone
+- Practice mechanics without pressure
+
+Ranked:
+- ELO tracking
+- Competitive matchmaking (searches for similar ELO)
+- Requires winning 10 unranked matches first (Configurable)
+
+Party FFA:
+- Everyone in the party fights each other
+- Last man standing wins
+
+Party Split:
+- Randomly splits party into two teams
+- Team Deathmatch style
+
+MOD MODE (Staff)
+----------------
+/mod            - Toggle Mod Mode
+Items:
+- Compass: Teleport through walls/to players
+- Book: Inspect player stats/inventory
+- Random: Spectate a random active match
+- Dye: Toggle Vanish (Invisible to players)
+- Skull: View online staff
+- Blaze Rod: Freeze player (Stops movement/interaction)
+
+CONFIGURATION
+-------------
+Performance:
+- matches-per-tick: How many matches to start per tick (Default: 5)
+- entity-clear-interval: How often to clear ground items (Default: 1200 ticks)
+
+Party:
+- max-size: Maximum players in a party (Default: 30)
+
+Enjoy!
+- Vera Network Development Team

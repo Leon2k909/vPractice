@@ -1,0 +1,99 @@
+name: vPractice
+main: pw.vera.vpractice.vPractice
+version: 1.0.0
+author: Vera Network
+description: Professional PvP Practice Plugin - Free & Open Source
+softdepend: [qRanks]
+
+commands:
+  # Queue commands
+  duel:
+    description: Duel a player
+    usage: /<command> <player>
+  accept:
+    description: Accept a duel request
+    usage: /<command> <player>
+  decline:
+    description: Decline a duel request
+    usage: /<command> <player>
+  spectate:
+    description: Spectate a match
+    usage: /<command> <player>
+    aliases: [spec]
+  
+  # Party commands
+  party:
+    description: Party commands
+    usage: /<command> <create|invite|accept|leave|kick|disband|info>
+    aliases: [p]
+  
+  # Stats commands
+  stats:
+    description: View player stats
+    usage: /<command> [player]
+  leaderboard:
+    description: View leaderboards
+    usage: /<command> [ladder]
+    aliases: [lb, top]
+  elo:
+    description: View ELO ratings
+    usage: /<command> [player]
+    aliases: [rating]
+  ping:
+    description: View your ping or another player's ping
+    usage: /<command> [player]
+    aliases: [latency, ms]
+  advancedping:
+    description: Advanced network diagnostics GUI
+    usage: /<command> [player]
+    aliases: [aping, netinfo]
+  
+  # Kit commands
+  kit:
+    description: Manage your kits
+    usage: /<command>
+  
+  # Match commands
+  leave:
+    description: Leave current match or queue
+    usage: /<command>
+  rematch:
+    description: Request or accept a rematch
+    usage: /<command> [accept|decline]
+    aliases: [rm]
+  
+  # Admin commands
+  practice:
+    description: Practice admin commands
+    usage: /<command> <subcommand>
+    permission: vpractice.admin
+  vpractice:
+    description: Plugin information
+    usage: /<command>
+  setspawn:
+    description: Set practice spawn
+    usage: /<command>
+    permission: vpractice.admin
+  seteditor:
+    description: Set kit editor location
+    usage: /<command>
+    permission: vpractice.admin
+  arena:
+    description: Arena management
+    usage: /<command> <create|delete|list|tp>
+    permission: vpractice.admin
+  
+  # Staff commands
+  mod:
+    description: Toggle mod mode
+    usage: /<command> [vanish]
+    permission: vpractice.staff
+    aliases: [modmode, staff, h]
+
+permissions:
+  vpractice.admin:
+    description: Full admin access
+    default: op
+  vpractice.staff:
+    description: Staff permissions
+    default: op

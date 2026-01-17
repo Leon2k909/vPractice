@@ -1,0 +1,294 @@
+================================================================================
+                        vPRACTICE - BUILTBYBIT LISTING
+                              FREE RESOURCE
+================================================================================
+
+================================================================================
+BASIC INFORMATION
+================================================================================
+
+TITLE:
+vPractice + qRanks - Professional PvP Practice Plugin [1.8-1.20] FREE
+
+TAGLINE:
+Complete practice core with ranked queues, parties, ELO system, kit editor,
+and MineHQ-style rank system included. Free forever!
+
+VERSION:
+1.0.0
+
+CATEGORY:
+Spigot Resources > Mechanics
+
+PRICE:
+Free ($0.00)
+
+SUPPORTED VERSIONS:
+1.8.x - 1.20.x (Optimized for 1.8.8)
+
+================================================================================
+DESCRIPTION (BBCode Format)
+================================================================================
+
+[CENTER]
+[IMG]https://i.imgur.com/YOUR_BANNER_HERE.png[/IMG]
+
+[SIZE=6][B][COLOR=#FF6600]vPractice + qRanks Bundle[/COLOR][/B][/SIZE]
+[SIZE=4][I]Professional PvP Practice Plugin - 100% FREE[/I][/SIZE]
+
+[SIZE=3]A complete, feature-rich practice plugin designed for competitive 
+PvP servers. Built with performance in mind and includes qRanks for 
+rank management. No premium required - everything included![/SIZE]
+[/CENTER]
+
+[HR][/HR]
+
+[SIZE=5][B][COLOR=#27AE60]✦ WHAT'S INCLUDED[/COLOR][/B][/SIZE]
+
+[LIST]
+[*][B]vPractice.jar[/B] - The full practice core plugin
+[*][B]qRanks.jar[/B] - MineHQ-style rank system (bonus!)
+[*][B]Full Documentation[/B] - Easy setup guides
+[*][B]Source Code Access[/B] - Learn and modify!
+[/LIST]
+
+[HR][/HR]
+
+[SIZE=5][B][COLOR=#3498DB]✦ vPractice Features[/COLOR][/B][/SIZE]
+
+[LIST]
+[*][B]Ranked & Unranked Queues[/B] - ELO-based matchmaking
+[*][B]5 Game Modes[/B] - NoDebuff, Combo, Gapple, Sumo, Archer
+[*][B]Party System[/B] - 2v2, Party vs Party, FFA matches
+[*][B]ELO Rating System[/B] - With divisions (Bronze to Grandmaster)
+[*][B]Kit Editor[/B] - Custom kit layouts per player
+[*][B]Dual Storage[/B] - JSON (file) or MySQL (database)
+[*][B]Multi-Arena Support[/B] - Unlimited arenas
+[*][B]Spectator Mode[/B] - Watch ongoing matches
+[*][B]Staff Mod Mode[/B] - Vanish, teleport, freeze
+[*][B]Leaderboards[/B] - Per-ladder and global rankings
+[*][B]Rematch System[/B] - Quick rematch after duels
+[*][B]Fully Configurable[/B] - Every message customizable
+[/LIST]
+
+[HR][/HR]
+
+[SIZE=5][B][COLOR=#9B59B6]✦ qRanks Features (Included FREE)[/COLOR][/B][/SIZE]
+
+[LIST]
+[*][B]MineHQ-Style GUI[/B] - Beautiful rank management
+[*][B]Grant History[/B] - Track all rank changes
+[*][B]Multiple Ranks[/B] - Owner, Admin, Mod, Helper, VIP, etc.
+[*][B]Tab Colors[/B] - Colored names in tab list
+[*][B]Chat Prefixes[/B] - Rank prefixes in chat
+[*][B]MySQL Storage[/B] - Shared across network
+[/LIST]
+
+[HR][/HR]
+
+[SIZE=5][B][COLOR=#3498DB]✦ Game Modes[/COLOR][/B][/SIZE]
+
+[LIST]
+[*][COLOR=#E74C3C][B]NoDebuff[/B][/COLOR] - Classic pot PvP with diamond armor, pearls, and splash potions
+[*][COLOR=#3498DB][B]Combo[/B][/COLOR] - Fast-paced combo fights with golden apples
+[*][COLOR=#F39C12][B]Gapple[/B][/COLOR] - Golden apple battles with enchanted gear
+[*][COLOR=#F1C40F][B]Sumo[/B][/COLOR] - Knockback only! Push your opponent off
+[*][COLOR=#27AE60][B]Archer[/B][/COLOR] - Bow-focused combat with leather armor
+[/LIST]
+
+[HR][/HR]
+
+[SIZE=5][B][COLOR=#3498DB]✦ Commands[/COLOR][/B][/SIZE]
+
+[CODE]
+PLAYER COMMANDS:
+/duel <player>           - Challenge a player to a duel
+/accept <player>         - Accept a duel request
+/decline <player>        - Decline a duel request
+/spectate <player>       - Spectate a player's match
+/leave                   - Leave your current match/queue
+/stats [player]          - View player statistics
+/leaderboard [ladder]    - View ELO leaderboards
+/elo [player]            - View ELO ratings
+/kit                     - Open the kit editor
+/rematch                 - Request/accept rematch
+/ping [player]           - Check your ping
+
+PARTY COMMANDS:
+/party create            - Create a new party
+/party invite <player>   - Invite a player
+/party accept <player>   - Accept party invite
+/party leave             - Leave your party
+/party kick <player>     - Kick a member (leader only)
+/party disband           - Disband the party (leader only)
+/party info              - View party information
+
+STAFF COMMANDS:
+/mod                     - Toggle staff mod mode
+/arena create <name>     - Create arena
+/arena seta <name>       - Set spawn A
+/arena setb <name>       - Set spawn B
+/setspawn                - Set practice spawn
+/seteditor               - Set kit editor location
+
+QRANKS COMMANDS:
+/rank <player>           - View player's rank
+/grant <player>          - Open rank grant GUI
+/grants <player>         - View grant history
+/staff                   - View online staff
+/arena                   - Arena management
+/setspawn                - Set the spawn location
+/seteditor               - Set the kit editor location
+/elo <player> <ladder> <amount> - Modify player ELO
+[/CODE]
+
+[HR][/HR]
+
+[SIZE=5][B][COLOR=#3498DB]✦ Permissions[/COLOR][/B][/SIZE]
+
+[CODE]
+vpractice.duel           - Use /duel command
+vpractice.spectate       - Use /spectate command
+vpractice.party          - Use party commands
+vpractice.stats          - View statistics
+vpractice.leaderboard    - View leaderboards
+vpractice.kit            - Edit kits
+
+vpractice.staff          - Access staff features
+vpractice.mod            - Toggle mod mode
+vpractice.arena          - Arena management
+vpractice.setspawn       - Set spawn/editor locations
+vpractice.elo.modify     - Modify player ELO
+vpractice.admin          - Full admin access
+[/CODE]
+
+[HR][/HR]
+
+[SIZE=5][B][COLOR=#3498DB]✦ Installation[/COLOR][/B][/SIZE]
+
+[LIST=1]
+[*]Download vPractice.jar
+[*]Place in your /plugins/ folder
+[*]Install dependency: qRanks (included/linked)
+[*]Start your server
+[*]Set spawn with /setspawn
+[*]Set kit editor location with /seteditor
+[*]Create arenas with /arena create <name>
+[*]Configure arena spawns and enable
+[*]Ready to play!
+[/LIST]
+
+[HR][/HR]
+
+[SIZE=5][B][COLOR=#3498DB]✦ Arena Setup[/COLOR][/B][/SIZE]
+
+[CODE]
+1. /arena create <name>      - Create new arena
+2. /arena setspawna <name>   - Set spawn point A (stand where you want)
+3. /arena setspawnb <name>   - Set spawn point B (stand where you want)
+4. /arena setmin <name>      - Set arena boundary min corner
+5. /arena setmax <name>      - Set arena boundary max corner
+6. /arena enable <name>      - Enable the arena
+7. /arena setsumo <name>     - Mark as sumo arena (optional)
+[/CODE]
+
+[HR][/HR]
+
+[SIZE=5][B][COLOR=#3498DB]✦ Dependencies[/COLOR][/B][/SIZE]
+
+[LIST]
+[*][B]qRanks[/B] - Required for rank/permission integration
+[*][B]Spigot/Paper 1.8.8[/B] - Recommended server software
+[/LIST]
+
+[HR][/HR]
+
+[SIZE=5][B][COLOR=#E74C3C]✦ Support[/COLOR][/B][/SIZE]
+
+[LIST]
+[*]Discord: [URL]https://discord.gg/YOUR_DISCORD[/URL]
+[*]GitHub Issues: Report bugs and suggestions
+[*]Documentation: Wiki included in download
+[/LIST]
+
+[HR][/HR]
+
+[CENTER]
+[SIZE=3][I]Made with ❤️ by Vera Network[/I][/SIZE]
+
+[SIZE=2]If you enjoy this plugin, please leave a review![/SIZE]
+[/CENTER]
+
+================================================================================
+RESOURCE ICON
+================================================================================
+
+Recommended: 128x128 PNG
+- Sword icon or PvP-themed
+- Clean, modern design
+- Plugin name or "vP" abbreviation
+
+================================================================================
+SCREENSHOTS TO INCLUDE
+================================================================================
+
+1. Main lobby/spawn with scoreboard visible
+2. Queue selection GUI
+3. Active match with both players fighting
+4. Match end screen with ELO changes
+5. Party system GUI
+6. Kit editor interface
+7. Leaderboard display
+8. Staff mod mode in action
+9. Arena overview (multiple arenas)
+10. Sumo arena with water below
+
+================================================================================
+DOWNLOAD CONTENTS
+================================================================================
+
+/vPractice-1.0.0.zip
+├── vPractice-1.0.0.jar          (Main plugin)
+├── README.md                     (Quick start guide)
+├── COMMANDS.md                   (Full command reference)
+├── PERMISSIONS.md                (Permission nodes)
+├── config.yml.example            (Example configuration)
+└── arenas/
+    └── example-arenas.yml        (Example arena configs)
+
+================================================================================
+TAGS/KEYWORDS
+================================================================================
+
+practice, pvp, pot, potpvp, nodebuff, combo, gapple, sumo, archer, 
+duels, 1v1, ranked, unranked, elo, matchmaking, queue, party, 
+competitive, minigame, arena, kit, kitpvp, hcf, factions
+
+================================================================================
+CHANGE LOG (for future updates)
+================================================================================
+
+[v1.0.0] - Initial Release
+- 5 game modes: NoDebuff, Combo, Gapple, Sumo, Archer
+- Ranked and Unranked queues
+- ELO rating system
+- Party system with FFA
+- Kit editor
+- Multi-arena support
+- Spectator mode
+- Staff mod mode
+- Clean scoreboard
+- Entity optimization
+
+================================================================================
+ADDITIONAL NOTES
+================================================================================
+
+- This is a FREE resource
+- Source code available on request/GitHub
+- Contributions welcome
+- Licensed under MIT (or your preferred license)
+- No premium/paid features locked
+- Fully functional out of the box
+
+================================================================================
